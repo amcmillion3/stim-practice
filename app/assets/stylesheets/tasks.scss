@@ -1,0 +1,26 @@
+#tasks {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#tasks > div {
+  flex: 1;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.task {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: grab; 
+}
+
+.task:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

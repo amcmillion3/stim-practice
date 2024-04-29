@@ -1,0 +1,10 @@
+<%= link_to 'Create New Task', new_task_path, class: 'btn btn-primary' %>
+
+<div id="tasks" data-controller="drag">
+  <% ['pre-planning', 'planning', 'in-progress', 'in-review', 'roll-out'].each do |status| %>
+    <div id="<%= status %>" data-tasks-target="column">
+      <h3><%= status.titleize %></h3>
+      <%= render partial: 'tasks/task', collection: @tasks[status], as: :task %>
+    </div>
+  <% end %>
+</div>

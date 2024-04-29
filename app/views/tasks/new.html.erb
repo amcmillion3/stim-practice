@@ -1,0 +1,21 @@
+<h1>Create New Task</h1>
+
+<%= form_with model: @task, local: true do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :task_title %>
+  </div>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :task_description %>
+  </div>
+  <div class="field">
+    <%= form.label :developer %>
+    <%= form.text_field :developer, id: :task_developer %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Save Task" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to tasks', tasks_path %>

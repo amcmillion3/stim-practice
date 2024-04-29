@@ -1,0 +1,9 @@
+<div class="task" id="task_<%= task.id %>" data-id="<%= task.id %>" data-controller="drag">
+  <h4><%= task.title %></h4>
+  <p><%= task.description %></p>
+  <p>Assigned to: <%= task.developer %></p>
+  <div class="task-actions">
+    <%= link_to 'Edit', edit_task_path(task), remote: true, data: { turbo_frame: "task_#{task.id}" } %>
+    <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?', turbo_method: "delete" } %>
+  </div>
+</div>
